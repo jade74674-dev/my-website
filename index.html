@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Surge Test Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jade74674-dev/my-website@main/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🚀 Welcome to My Surge Test Website</h1>
+            <p class="subtitle">This website is deployed using Surge.sh!</p>
+        </header>
+
+        <main class="main-content">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Testing Surge.sh Deployment</h2>
+                    <p>All resources are loaded from Surge CDN</p>
+                    <button id="click-btn" class="cta-button">Click Me!</button>
+                </div>
+            </section>
+
+            <section class="features">
+                <div class="feature-card">
+                    <h3>📁 File 1</h3>
+                    <p>HTML Document</p>
+                    <span class="status" id="html-status">Loading...</span>
+                </div>
+                <div class="feature-card">
+                    <h3>🎨 File 2</h3>
+                    <p>CSS Stylesheet</p>
+                    <span class="status" id="css-status">Loading...</span>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ File 3</h3>
+                    <p>JavaScript File</p>
+                    <span class="status" id="js-status">Loading...</span>
+                </div>
+            </section>
+
+            <section class="interactive">
+                <h3>Interactive Demo</h3>
+                <div class="demo-area">
+                    <div id="color-box" class="color-box"></div>
+                    <div class="controls">
+                        <button id="change-color">Change Color</button>
+                        <button id="reset-color">Reset</button>
+                    </div>
+                    <p>Click count: <span id="click-count">0</span></p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>✅ Successfully deployed with <strong>Surge.sh</strong></p>
+            <p class="timestamp" id="timestamp"></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/jade74674-dev/my-website@main/script.js"></script>
+</body>
+</html>
