@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Website...</title>
+</head>
+<body>
+    <script>
+        async function loadWebsite() {
+            try {
+                const url = 'https://cdn.jsdelivr.net/gh/jade74674-dev/my-website@main/index.html';
+                
+                let response = await fetch(url);
+                if (!response.ok) {
+                    response = await fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`);
+                }
+                
+                const html = await response.text();
+                
+                document.open();
+                document.write(html);
+                document.close();
+                
+            } catch (error) {
+                document.body.innerHTML = 'Failed to load content: ' + error.message;
+                console.error('Load error:', error);
+            }
+        }
+
+        loadWebsite();
+    </script>
+</body>
+</html>
